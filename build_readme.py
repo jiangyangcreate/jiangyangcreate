@@ -1,6 +1,7 @@
 import feedparser
 import pathlib
 from datetime import datetime
+import time
 
 
 class Spider:
@@ -27,17 +28,23 @@ class Spider:
 
         return "\n".join(entries[:5])
 
+    def fetch_now(self):
+        now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+        return "[Automated by GitHub Actions at {}](build_readme.py)".format(now)
+
     def extract_custom_section(
-        self, content, key="<!-- Automated by GitHub Actions -->\n"
+        self, contents, key="<!-- Automated by GitHub Actions -->\n"
     ):
         for path in self.readme:
-            custom_section = path.open("r", encoding="utf-8").read().split(key)[0]
-            content = custom_section + key + content
-            path.open("w", encoding="utf-8").write(content)
+            custom_section = path.open("r", encoding="utf-8").read().split(key)[0] + key
+            for i in contents:
+                custom_section += "\n" + i + "\n"
+            path.open("w", encoding="utf-8").write(custom_section)
 
     def main(self):
         blog = spider.fetch_blog()
-        self.extract_custom_section(blog)
+        now = self.fetch_now()
+        self.extract_custom_section([blog, now])
 
 
 if __name__ == "__main__":

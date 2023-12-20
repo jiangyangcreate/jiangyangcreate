@@ -27,13 +27,14 @@
 
 ## Recently Stats
 
-[Automated by GitHub Actions](build_readme.py)
-
 ![jiangyangcreate's GitHub stats](https://github-stats.liuli.lol/api?username=jiangyangcreate&show_icons=true&include_all_commits=true&count_private=true&locale=en&rank_icon=percentile)
 
 <!-- Automated by GitHub Actions -->
+
 * <a href='https://jiangmiemie.com/blog/travellings2023' target='_blank'>旅行：记录2023年</a> - 2023-12-30
 * <a href='https://jiangmiemie.com/blog/principle' target='_blank'>原则：我的世界观</a> - 2023-06-30
 * <a href='https://jiangmiemie.com/blog/travellings2022' target='_blank'>旅行：记录2022年</a> - 2022-12-30
 * <a href='https://jiangmiemie.com/blog/home' target='_blank'>家居：从自动化到搬家指南</a> - 2022-06-30
 * <a href='https://jiangmiemie.com/blog/travellings2021' target='_blank'>旅行：记录2021年</a> - 2021-12-30
+
+[Automated by GitHub Actions at 2023-12-20 16:29:09](build_readme.py)
