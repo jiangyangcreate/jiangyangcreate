@@ -2,7 +2,7 @@
 
 - 🐼 from Shenzhen, China (UTC+8)
 - ❤ improving existing tools over creating my own.
-- 📧 [jiangyangcreate@gmail.com](jiangyangcreate@gmail.com)
+- 📧 [jiangyangcreate@gmail.com](mailto:jiangyangcreate@gmail.com)
 - 🌐 [https://www.jiangmiemie.com](https://www.jiangmiemie.com)
 
 ### 🔨 Intermediate Skills
