@@ -30,7 +30,7 @@ class Spider:
 
     def fetch_now(self):
         now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
-        return "[Automated by GitHub Actions at {}](build_readme.py)".format(now)
+        return "[Automated by GitHub Actions at UTC {}](build_readme.py)".format(now)
 
     def extract_custom_section(
         self, contents, key="<!-- Automated by GitHub Actions -->\n"
