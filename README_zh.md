@@ -1,14 +1,14 @@
 [English](README.md) | [中文](README_zh.md)
 
-## Hi , I'm jiangyang
+## 你好, 我是蒋洋
 
-- 🐼 from Shenzhen, China (UTC+8)
+- 🐼 来自中国深圳 (UTC+8)
 - 📧 [jiangyangcreate@gmail.com](mailto:jiangyangcreate@gmail.com)
 - 🌐 [https://www.jiangmiemie.com](https://www.jiangmiemie.com)
 
-> I prefer enhancing existing tools to creating my own. If your open-source project needs a web crawling engine, I'd be delighted to assist.
+> 我更喜欢改进现有的工具而不是创建自己的。如果你的开源项目需要一个网络爬虫引擎，我会很乐意提供帮助。
 
-### 🔨 Intermediate Skills
+### 🔨 中级技能
 
 ![Python](https://img.shields.io/badge/-Python-333333?style=flat&logo=python)
 ![AI](https://img.shields.io/badge/-AI-333333?style=flat-square&logo=ai)
@@ -17,7 +17,7 @@
 ![English](https://img.shields.io/badge/-English-333333?style=flat-square&logo=english)
 ![Markdown](https://img.shields.io/badge/-Markdown-333333?style=flat&logo=markdown)
 
-### 🔨 Basic Skills
+### 🔨 初级技能
 
 ![Git](https://img.shields.io/badge/-Git-333333?style=flat-square&logo=git)
 ![GitHub](https://img.shields.io/badge/-GitHub-333333?style=flat-square&logo=github)
@@ -28,7 +28,7 @@
 ![C++](https://img.shields.io/badge/C++-00599C?style=flat&logo=c%2B%2B)
 ![Microcontroller](https://img.shields.io/badge/Microcontroller-00599C?style=flat&logo=Microcontroller)
 
-## Recently Stats
+## 最近状态
 
 ![jiangyangcreate's GitHub stats](https://github-stats.liuli.lol/api?username=jiangyangcreate&show_icons=true&include_all_commits=true&count_private=true&locale=en&rank_icon=percentile)
 
@@ -40,4 +40,4 @@
 * <a href='https://jiangmiemie.com/blog/home' target='_blank'>家居：从自动化到搬家指南</a> - 2022-06-30
 * <a href='https://jiangmiemie.com/blog/travellings2021' target='_blank'>旅行：记录2021年</a> - 2021-12-30
 
-[Automated by GitHub Actions at UTC 2023-12-24 23:04:16](build_readme.py)
+[由 GitHub Actions 于2023-12-24 23:04:16 自动构建](build_readme.py)
