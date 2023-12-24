@@ -40,4 +40,8 @@
 * <a href='https://jiangmiemie.com/blog/home' target='_blank'>家居：从自动化到搬家指南</a> - 2022-06-30
 * <a href='https://jiangmiemie.com/blog/travellings2021' target='_blank'>旅行：记录2021年</a> - 2021-12-30
 
+<<<<<<< HEAD
 [Automated by GitHub Actions at UTC 2023-12-24 23:04:16](build_readme.py)
+=======
+[Automated by GitHub Actions at UTC 2023-12-24 14:12:08](build_readme.py)
+>>>>>>> 5f1ceb6343d59dea645812a03d9801f9210f8671
