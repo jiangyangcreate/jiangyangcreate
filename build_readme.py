@@ -32,7 +32,7 @@ class Spider:
                 now
             )
         elif type == self.root / "README_zh.md":
-            return "[由 GitHub Actions 于 {} 自动构建](build_readme.py)".format(now)
+            return "[由 GitHub Actions 于 UTC {} 自动构建](build_readme.py)".format(now)
 
     def extract_custom_section(
         self, contents, key="<!-- Automated by GitHub Actions -->\n"
