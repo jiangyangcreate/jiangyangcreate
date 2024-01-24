@@ -34,6 +34,9 @@
 
 <!-- Automated by GitHub Actions -->
 
+* <a href='https://jiangmiemie.com/blog/blog' target='_blank'>我是如何写博客的</a> - 2023-12-30
+* <a href='https://jiangmiemie.com/blog/principle' target='_blank'>我的世界观</a> - 2022-12-30
+* <a href='https://jiangmiemie.com/blog/home' target='_blank'>从自动化到搬家指南</a> - 2021-12-30
+* <a href='https://jiangmiemie.com/blog/dream' target='_blank'>从阳光中沉入深海</a> - 2020-12-30
 
-
-[Automated by GitHub Actions at UTC 2024-01-23 16:14:42](build_readme.py)
+[Automated by GitHub Actions at UTC 2024-01-24 16:14:57](build_readme.py)
