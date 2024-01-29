@@ -2,12 +2,23 @@ import feedparser
 import pathlib
 from datetime import datetime
 import time
+import requests
+from jinja2 import Environment, FileSystemLoader
 
-
+class Readme:
+    def __init__(self, path) -> None:
+        self.root = pathlib.Path(__file__).parent.resolve()
+        self.file_path = self.root / path.replace(".jinja", ".md")
+        self.jinja = Environment(loader=FileSystemLoader(self.root)).get_template(path)
 class Spider:
     def __init__(self) -> None:
-        self.root = pathlib.Path(__file__).parent.resolve()
-        self.readme = [self.root / "README.md", self.root / "README_zh.md"]
+        
+        self.readme = [Readme("README.jinja"), Readme("README_zh.jinja")]
+
+    def fetch_weather(self, city="shenzhen"):
+        url = "https://wttr.in/{}?m&format=3".format(city)
+        res = requests.get(url).text.split(":")[1].replace('\n', '')
+        return res
 
     def fetch_blog(self):
         content = feedparser.parse("https://jiangmiemie.com/blog/rss.xml")["entries"]
@@ -27,26 +38,27 @@ class Spider:
 
     def fetch_now(self, type):
         now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
-        if type == self.root / "README.md":
+        if str(type).endswith("README.md"):
             return "[Automated by GitHub Actions at UTC {}](build_readme.py)".format(
                 now
             )
-        elif type == self.root / "README_zh.md":
+        elif str(type).endswith("README_zh.md"):
             return "[由 GitHub Actions 于 UTC {} 自动构建](build_readme.py)".format(now)
 
-    def extract_custom_section(
-        self, contents, key="<!-- Automated by GitHub Actions -->\n"
-    ):
-        for path in self.readme:
-            custom_section = path.open("r", encoding="utf-8").read().split(key)[0] + key
-            for i in contents:
-                custom_section += "\n" + i + "\n"
-            custom_section += "\n" + self.fetch_now(path) + "\n"
-            path.open("w", encoding="utf-8").write(custom_section)
-
     def main(self):
+        weather = spider.fetch_weather()
         blog = spider.fetch_blog()
-        self.extract_custom_section([blog])
+        for i in self.readme:
+            file_path = i.file_path
+            jinja = i.jinja
+            fetch = spider.fetch_now(file_path)
+            context = {
+                "weather" : weather,
+                "fetch" : fetch,
+                "blog" : blog,
+                }
+            custom_section = jinja.render(context)
+            file_path.open("w", encoding="utf-8").write(custom_section)
 
 
 if __name__ == "__main__":

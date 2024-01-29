@@ -2,7 +2,7 @@
 
 ## Hi , I'm jiangyang
 
-- 🐼 from Shenzhen, China (UTC+8)
+- 🐼 from Shenzhen, China (UTC+8)  ⛅️  +14°C
 - 📧 [jiangyangcreate@gmail.com](mailto:jiangyangcreate@gmail.com)
 - 🌐 [https://www.jiangmiemie.com](https://www.jiangmiemie.com)
 
@@ -32,12 +32,9 @@
 
 ![jiangyangcreate's GitHub stats](https://github-stats.liuli.lol/api?username=jiangyangcreate&show_icons=true&include_all_commits=true&count_private=true&locale=en)
 
-<!-- Automated by GitHub Actions -->
+* <a href='https://jiangmiemie.com/blog/blog' target='_blank'>我是如何写博客的</a> - 2023-12-30
+* <a href='https://jiangmiemie.com/blog/principle' target='_blank'>我的世界观</a> - 2022-12-30
+* <a href='https://jiangmiemie.com/blog/home' target='_blank'>从自动化到搬家指南</a> - 2021-12-30
+* <a href='https://jiangmiemie.com/blog/dream' target='_blank'>从阳光中沉入深海</a> - 2020-12-30
 
-* <a href='https://jiangmiemie.com/blog/design' target='_blank'>设计：设计的意义</a> - 2023-12-30
-* <a href='https://jiangmiemie.com/blog/principle' target='_blank'>原则：我的世界观</a> - 2022-12-30
-* <a href='https://jiangmiemie.com/blog/home' target='_blank'>家居：从自动化到搬家指南</a> - 2021-12-30
-* <a href='https://jiangmiemie.com/blog/dream' target='_blank'>梦境：从阳光中沉入深海</a> - 2020-12-30
-* <a href='https://jiangmiemie.com/blog/blog' target='_blank'>博客：我是如何写博客的</a> - 2019-12-30
-
-[Automated by GitHub Actions at UTC 2024-01-09 01:08:11](build_readme.py)
+[Automated by GitHub Actions at UTC 2024-01-29 11:57:45](build_readme.py)
