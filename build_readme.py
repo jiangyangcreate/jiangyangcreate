@@ -17,7 +17,10 @@ class Spider:
 
     def fetch_weather(self, city="shenzhen"):
         url = "https://wttr.in/{}?m&format=3".format(city)
-        res = requests.get(url).text.split(":")[1].replace('\n', '')
+        try:
+            res = requests.get(url).text.split(":")[1].replace('\n', '')
+        except:
+            res = "⛅️  0°C"
         return res
 
     def fetch_blog(self):
