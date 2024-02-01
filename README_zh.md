@@ -32,9 +32,10 @@
 
 ![jiangyangcreate's GitHub stats](https://github-stats.liuli.lol/api?username=jiangyangcreate&show_icons=true&include_all_commits=true&count_private=true&locale=en&rank_icon=percentile)
 
+* <a href='https://jiangmiemie.com/blog/2024/1/31/' target='_blank'>博客文本摘要</a> - 2024-01-31
 * <a href='https://jiangmiemie.com/blog/blog' target='_blank'>我是如何写博客的</a> - 2023-12-30
 * <a href='https://jiangmiemie.com/blog/principle' target='_blank'>我的世界观</a> - 2022-12-30
 * <a href='https://jiangmiemie.com/blog/home' target='_blank'>从自动化到搬家指南</a> - 2021-12-30
 * <a href='https://jiangmiemie.com/blog/dream' target='_blank'>从阳光中沉入深海</a> - 2020-12-30
 
-[由 GitHub Actions 于 UTC 2024-02-01 15:55:53 自动构建](build_readme.py)
+[由 GitHub Actions 于 UTC 2024-02-01 16:14:01 自动构建](build_readme.py)
