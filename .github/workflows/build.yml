@@ -37,6 +37,10 @@ jobs:
       run: |-
         python build_readme.py
         cat README.md
+        cat README_zh.md
+      env:
+        BAIDU_API_KEY: ${{ secrets.BAIDU_API_KEY }}
+        BAIDU_SECRET_KEY: ${{ secrets.BAIDU_SECRET_KEY }}
 
     - name: Commit and push if changed
       run: |-

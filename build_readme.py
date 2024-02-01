@@ -3,6 +3,7 @@ import pathlib
 from datetime import datetime
 import time
 import requests
+import summary
 from jinja2 import Environment, FileSystemLoader
 
 class Readme:
@@ -25,7 +26,7 @@ class Spider:
 
     def fetch_blog(self):
         content = feedparser.parse("https://jiangmiemie.com/blog/rss.xml")["entries"]
-
+        summary.summary(content)
         entries = [
             "* <a href='{url}' target='_blank'>{title}</a> - {published}".format(
                 title=entry["title"],
