@@ -79,7 +79,7 @@ def summary(feed_content):
             continue
         else:
             summary = get_summary(content)
-            loaded_dict.update({url: {content_hash: summary}})
+            loaded_dict.update({url: {'content_hash': content_hash, 'summary': summary}})
     # 将字典存入JSON文件
     with open(json_file_path, "w", encoding="utf-8") as json_file:
         json.dump(loaded_dict, json_file, indent=4)
