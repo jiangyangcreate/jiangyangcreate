@@ -2,7 +2,7 @@
 
 ## Hi , I'm jiangyang
 
-- 🐼 from Shenzhen, China (UTC+8)  ⛅️  +21°C
+- 🐼 from Shenzhen, China (UTC+8)  ⛅️  +19°C
 - 📧 [jiangyangcreate@gmail.com](mailto:jiangyangcreate@gmail.com)
 - 🌐 [https://www.jiangmiemie.com](https://www.jiangmiemie.com)
 
@@ -38,4 +38,4 @@
 * <a href='https://jiangmiemie.com/blog/home' target='_blank'>从自动化到搬家指南</a> - 2021-12-30
 * <a href='https://jiangmiemie.com/blog/dream' target='_blank'>从阳光中沉入深海</a> - 2020-12-30
 
-[Automated by GitHub Actions at UTC 2024-02-01 16:14:01](build_readme.py)
+[Automated by GitHub Actions at UTC 2024-02-02 00:21:39](build_readme.py)
