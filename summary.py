@@ -49,7 +49,8 @@ class BaiduAI:
 
 
 def get_summary(content: str) -> str:
-    selector = Selector(text=content)
+    # 剪切掉摘要部分，仅保留正文
+    selector = Selector(text=content.split('此内容根据文章生成，仅用于文章内容的解释与总结</div></div></div><p>')[1])
     content_format = "".join(selector.xpath(".//text()").getall())
     ai = BaiduAI()
     summary = ai.get_result(content_format)
