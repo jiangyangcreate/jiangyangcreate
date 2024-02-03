@@ -1,6 +1,7 @@
 import os
 import json
 import time
+import hashlib
 import pathlib
 import requests
 import feedparser
@@ -71,8 +72,7 @@ def blog_summary(feed_content):
         content = page["content"][0]["value"]
         selector = Selector(text=content.split('此内容根据文章生成，仅用于文章内容的解释与总结')[1])
         content_format = "".join(selector.xpath(".//text()").getall())
-        content_hash = hash(content_format)
-
+        content_hash = hashlib.md5(content_format.encode()).hexdigest()
         if (
             loaded_dict.get(url)
             and loaded_dict.get(url).get("content_hash") == content_hash
