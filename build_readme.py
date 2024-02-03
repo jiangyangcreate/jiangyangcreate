@@ -103,7 +103,6 @@ def blog_summary(feed_content):
         else:
             ai = BaiduAI()
             summary = ai.get_result(content_format)
-            summary = content_format[:5]
             loaded_dict.update(
                 {url: {"content_hash": content_hash, "summary": summary}}
             )
