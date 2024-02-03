@@ -8,8 +8,6 @@ import feedparser
 from parsel import Selector
 from datetime import datetime
 from jinja2 import Environment, FileSystemLoader
-
-
 class BaiduAI:
     def __init__(self):
         self.BAIDU_API_KEY = os.getenv("BAIDU_API_KEY")
@@ -53,24 +51,48 @@ class BaiduAI:
             answer_text = json_data["result"]
         return answer_text
 
+
+class Jsonsummary:
+    def __init__(self):
+        root = pathlib.Path(__file__).parent.resolve()
+        self.json_file_path = os.path.join(root,"summary")
+        self.url = "https://jiangmiemie.com/"
+        self.pages = []
+        
+    def load_json(self):
+        # 加载JSON文件
+        loaded_dict = {}
+        for file in os.listdir(self.json_file_path):
+            with open(os.path.join(self.json_file_path, file), "r", encoding="utf-8") as json_file:
+                loaded_dict[self.url + file.replace("_", "/").replace(".json", "")] = json.load(json_file)
+        return loaded_dict
+
+    def save_json(self,loaded_dict):
+        # 将字典存入JSON文件
+        for key in loaded_dict:
+            key_path = key.replace(self.url, "").replace("/", "_") + ".json"
+            save_path = os.path.join(self.json_file_path, key_path)
+            with open(save_path, "w", encoding="utf-8") as json_file:
+                json.dump(loaded_dict[key], json_file, indent=4)
+
+    def clean_json(self):
+        # 根据RSS结果清理JSON文件
+        for file in os.listdir(self.json_file_path):
+            if file not in self.pages:
+                os.remove(os.path.join(self.json_file_path, file))
+
 def blog_summary(feed_content):
-    json_file_path = "output.json"
-
-    # 如果JSON文件不存在，则创建一个空的JSON文件
-    if not os.path.exists(json_file_path):
-        with open(json_file_path, "w", encoding="utf-8") as new_json_file:
-            json.dump({}, new_json_file)
-
-    # 读取JSON文件并将其转换为Python字典
-    with open(json_file_path, "r", encoding="utf-8") as json_file:
-        loaded_dict = json.load(json_file)
+    jsdata = Jsonsummary()
+    loaded_dict = jsdata.load_json()
 
     for page in feed_content:
         url = page["link"].split("#")[0]
-
+        jsdata.pages.append(url.replace(jsdata.url, "").replace("/", "_") + ".json")
         # 剪切掉摘要部分，仅保留正文
         content = page["content"][0]["value"]
-        selector = Selector(text=content.split('此内容根据文章生成，仅用于文章内容的解释与总结')[1])
+        selector = Selector(
+            text=content.split("此内容根据文章生成，仅用于文章内容的解释与总结")[1]
+        )
         content_format = "".join(selector.xpath(".//text()").getall())
         content_hash = hashlib.md5(content_format.encode()).hexdigest()
         if (
@@ -81,22 +103,27 @@ def blog_summary(feed_content):
         else:
             ai = BaiduAI()
             summary = ai.get_result(content_format)
-            loaded_dict.update({url: {'content_hash': content_hash, 'summary': summary}})
-    # 将字典存入JSON文件
-    with open(json_file_path, "w", encoding="utf-8") as json_file:
-        json.dump(loaded_dict, json_file, indent=4)
+            summary = content_format[:5]
+            loaded_dict.update(
+                {url: {"content_hash": content_hash, "summary": summary}}
+            )
+    jsdata.save_json(loaded_dict)
+    jsdata.clean_json()
 
 class Readme:
     def __init__(self, path) -> None:
         self.root = pathlib.Path(__file__).parent.resolve()
-        self.file_path = self.root / path.replace(".jinja", ".md")
-        self.jinja = Environment(loader=FileSystemLoader(self.root)).get_template(path)
+        self.file_path = self.root / "{}.md".format(path)
+
+        self.jinja = Environment(
+            loader=FileSystemLoader(os.path.join(self.root, "jinja"))
+        ).get_template("{}.jinja".format(path))
 
 
 class Spider:
     def __init__(self) -> None:
 
-        self.readme = [Readme("README.jinja"), Readme("README_zh.jinja")]
+        self.readme = [Readme("README"), Readme("README_zh")]
 
     def fetch_weather(self, city="shenzhen"):
         url = "https://wttr.in/{}?m&format=3".format(city)
