@@ -2,7 +2,7 @@
 
 ## 你好, 我是蒋洋
 
-- 🐼 来自中国深圳 (UTC+8)  ⛅️  +19°C
+- 🐼 来自中国深圳 ⛅️  +19°C
 - 📧 [jiangyangcreate@gmail.com](mailto:jiangyangcreate@gmail.com)
 - 🌐 [https://www.jiangmiemie.com](https://www.jiangmiemie.com)
 
