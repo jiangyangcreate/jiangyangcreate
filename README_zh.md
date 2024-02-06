@@ -2,11 +2,9 @@
 
 ## 你好, 我是蒋洋
 
-- 🐼 来自中国深圳 ⛅️  +19°C
+- 🐼 来自深圳  ⛅️  +21°C
 - 📧 [jiangyangcreate@gmail.com](mailto:jiangyangcreate@gmail.com)
 - 🌐 [https://www.jiangmiemie.com](https://www.jiangmiemie.com)
-
-> 我更喜欢改进现有的工具而不是创建自己的。如果你的开源项目需要一个网络爬虫引擎，我会很乐意提供帮助。
 
 ### 🔨 中级技能
 
@@ -30,12 +28,10 @@
 
 ## 最近状态
 
-![jiangyangcreate's GitHub stats](https://github-stats.liuli.lol/api?username=jiangyangcreate&show_icons=true&include_all_commits=true&count_private=true&locale=en&rank_icon=percentile)
-
 * <a href='https://jiangmiemie.com/blog/2024/1/31/' target='_blank'>博客文本摘要</a> - 2024-01-31
 * <a href='https://jiangmiemie.com/blog/blog' target='_blank'>我是如何写博客的</a> - 2023-12-30
 * <a href='https://jiangmiemie.com/blog/principle' target='_blank'>我的世界观</a> - 2022-12-30
 * <a href='https://jiangmiemie.com/blog/home' target='_blank'>从自动化到搬家指南</a> - 2021-12-30
 * <a href='https://jiangmiemie.com/blog/dream' target='_blank'>从阳光中沉入深海</a> - 2020-12-30
 
-[由 GitHub Actions 于 UTC 2024-02-05 16:13:07 自动构建](build_readme.py)
+[由 GitHub Actions 于 UTC 2024-02-06 07:08:29 自动构建](build_readme.py)
