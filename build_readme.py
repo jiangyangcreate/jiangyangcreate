@@ -8,6 +8,8 @@ import feedparser
 from parsel import Selector
 from datetime import datetime
 from jinja2 import Environment, FileSystemLoader
+
+
 class BaiduAI:
     def __init__(self):
         self.BAIDU_API_KEY = os.getenv("BAIDU_API_KEY")
@@ -55,19 +57,23 @@ class BaiduAI:
 class Jsonsummary:
     def __init__(self):
         root = pathlib.Path(__file__).parent.resolve()
-        self.json_file_path = os.path.join(root,"summary")
+        self.json_file_path = os.path.join(root, "summary")
         self.url = "https://jiangmiemie.com/"
         self.pages = []
-        
+
     def load_json(self):
         # 加载JSON文件
         loaded_dict = {}
         for file in os.listdir(self.json_file_path):
-            with open(os.path.join(self.json_file_path, file), "r", encoding="utf-8") as json_file:
-                loaded_dict[self.url + file.replace("_", "/").replace(".json", "")] = json.load(json_file)
+            with open(
+                os.path.join(self.json_file_path, file), "r", encoding="utf-8"
+            ) as json_file:
+                loaded_dict[self.url + file.replace("_", "/").replace(".json", "")] = (
+                    json.load(json_file)
+                )
         return loaded_dict
 
-    def save_json(self,loaded_dict):
+    def save_json(self, loaded_dict):
         # 将字典存入JSON文件
         for key in loaded_dict:
             key_path = key.replace(self.url, "").replace("/", "_") + ".json"
@@ -81,6 +87,7 @@ class Jsonsummary:
             if file not in self.pages:
                 os.remove(os.path.join(self.json_file_path, file))
 
+
 def blog_summary(feed_content):
     jsdata = Jsonsummary()
     loaded_dict = jsdata.load_json()
@@ -89,10 +96,12 @@ def blog_summary(feed_content):
         url = page["link"].split("#")[0]
         jsdata.pages.append(url.replace(jsdata.url, "").replace("/", "_") + ".json")
         # 剪切掉摘要部分，仅保留正文
-        content = page["content"][0]["value"]
-        selector = Selector(
-            text=content.split("此内容根据文章生成，仅用于文章内容的解释与总结")[1]
+        content = "".join(
+            page["content"][0]["value"].split(
+                "此内容根据文章生成，仅用于文章内容的解释与总结"
+            )[1:]
         )
+        selector = Selector(text=content)
         content_format = "".join(selector.xpath(".//text()").getall())
         content_hash = hashlib.md5(content_format.encode()).hexdigest()
         if (
@@ -108,6 +117,7 @@ def blog_summary(feed_content):
             )
     jsdata.save_json(loaded_dict)
     jsdata.clean_json()
+
 
 class Readme:
     def __init__(self, path) -> None:
