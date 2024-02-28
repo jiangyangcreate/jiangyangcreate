@@ -2,7 +2,7 @@
 
 ## 你好, 我是蒋洋
 
-- 🐼 来自深圳  ⛅️  +16°C
+- 🐼 来自深圳  ⛅️  +19°C
 - 📧 [jiangyangcreate@gmail.com](mailto:jiangyangcreate@gmail.com)
 - 🌐 [https://www.jiangmiemie.com](https://www.jiangmiemie.com)
 
@@ -28,10 +28,10 @@
 
 ## 最近状态
 
+* <a href='https://jiangmiemie.com/blog/oldremove' target='_blank'>旧服务的迁移</a> - 2024-02-28
 * <a href='https://jiangmiemie.com/blog/2024/1/31/' target='_blank'>博客文本摘要</a> - 2024-01-31
 * <a href='https://jiangmiemie.com/blog/blog' target='_blank'>我是如何写博客的</a> - 2023-12-30
 * <a href='https://jiangmiemie.com/blog/principle' target='_blank'>我的世界观</a> - 2022-12-30
 * <a href='https://jiangmiemie.com/blog/home' target='_blank'>从自动化到搬家指南</a> - 2021-12-30
-* <a href='https://jiangmiemie.com/blog/dream' target='_blank'>从阳光中沉入深海</a> - 2020-12-30
 
-[由 GitHub Actions 于 UTC 2024-02-27 16:14:12 自动构建](build_readme.py)
+[由 GitHub Actions 于 UTC 2024-02-28 03:41:15 自动构建](build_readme.py)
