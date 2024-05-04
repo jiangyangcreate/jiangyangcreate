@@ -2,7 +2,7 @@
 
 ## Hi , I'm jiangyang
 
-- 🐼 from Shenzhen  🌦   +25°C
+- 🐼 from Shenzhen  ⛈   +23°C
 - 📧 [jiangyangcreate@gmail.com](mailto:jiangyangcreate@gmail.com)
 - 🌐 [https://www.jiangmiemie.com](https://www.jiangmiemie.com)
 
@@ -34,4 +34,4 @@
 * <a href='https://jiangmiemie.com/blog/blog' target='_blank'>我是如何写博客的</a> - 2023-12-30
 * <a href='https://jiangmiemie.com/blog/principle' target='_blank'>我的世界观</a> - 2022-12-30
 
-[Automated by GitHub Actions at UTC 2024-05-03 16:14:20](build_readme.py)
+[Automated by GitHub Actions at UTC 2024-05-04 16:13:13](build_readme.py)
