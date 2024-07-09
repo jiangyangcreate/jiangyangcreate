@@ -29,9 +29,9 @@
 ## Recently Stats
 
 * <a href='https://jiangmiemie.com/blog/解析摄像头云台控制指令' target='_blank'>解析摄像头云台控制指令</a> - 2024-06-30
-* <a href='https://jiangmiemie.com/blog/家用代边缘计算设备' target='_blank'>家用边缘计算设备</a> - 2024-05-31
+* <a href='https://jiangmiemie.com/blog/使用flask搭建个人共享屏幕工具' target='_blank'>使用flask搭建个人共享屏幕工具</a> - 2024-05-31
 * <a href='https://jiangmiemie.com/blog/playexchange' target='_blank'>自制智能家居</a> - 2024-04-30
 * <a href='https://jiangmiemie.com/blog/exchangeai' target='_blank'>个人产品设计：乐高、3D打印与激光切割</a> - 2024-03-31
 * <a href='https://jiangmiemie.com/blog/oldremove' target='_blank'>服务迁移至群晖</a> - 2024-02-28
 
-[Automated by GitHub Actions at UTC 2024-07-08 16:15:32](build_readme.py)
+[Automated by GitHub Actions at UTC 2024-07-09 16:15:40](build_readme.py)
