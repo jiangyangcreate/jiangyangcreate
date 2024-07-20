@@ -2,7 +2,7 @@
 
 ## 你好, 我是蒋洋
 
-- 🐼 来自深圳  ☀️   +30°C
+- 🐼 来自深圳  ⛅️  +33°C
 - 📧 [jiangyangcreate@gmail.com](mailto:jiangyangcreate@gmail.com)
 - 🌐 [https://www.jiangmiemie.com](https://www.jiangmiemie.com)
 
@@ -28,10 +28,10 @@
 
 ## 最近状态
 
-* <a href='https://jiangmiemie.com/blog/解析摄像头云台控制指令/' target='_blank'>解析摄像头云台控制指令</a> - 2024-06-30
-* <a href='https://jiangmiemie.com/blog/使用flask搭建个人共享屏幕工具/' target='_blank'>使用flask搭建个人共享屏幕工具</a> - 2024-05-31
-* <a href='https://jiangmiemie.com/blog/playexchange/' target='_blank'>自制智能家居</a> - 2024-04-30
-* <a href='https://jiangmiemie.com/blog/exchangeai/' target='_blank'>个人产品设计：乐高、3D打印与激光切割</a> - 2024-03-31
-* <a href='https://jiangmiemie.com/blog/oldremove/' target='_blank'>服务迁移至群晖</a> - 2024-02-28
+* <a href='https://jiangmiemie.com/blog/2024/6/30/' target='_blank'>解析摄像头云台控制指令</a> - 2024-06-30
+* <a href='https://jiangmiemie.com/blog/2024/5/31/' target='_blank'>使用flask搭建个人共享屏幕工具</a> - 2024-05-31
+* <a href='https://jiangmiemie.com/blog/2024/4/30/' target='_blank'>自制智能家居</a> - 2024-04-30
+* <a href='https://jiangmiemie.com/blog/2024/3/31/' target='_blank'>个人产品设计：乐高、3D打印与激光切割</a> - 2024-03-31
+* <a href='https://jiangmiemie.com/blog/2024/2/28/' target='_blank'>服务迁移至群晖</a> - 2024-02-28
 
-[由 GitHub Actions 于 UTC 2024-07-19 16:14:55 自动构建](build_readme.py)
+[由 GitHub Actions 于 UTC 2024-07-20 11:04:01 自动构建](build_readme.py)
