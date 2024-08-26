@@ -13,9 +13,9 @@
 ![Math](https://img.shields.io/badge/-Math-333333?style=flat-square&logo=mathworks)
 ![Chinese](https://img.shields.io/badge/-Chinese-333333?style=flat-square&logo=chinese)
 ![English](https://img.shields.io/badge/-English-333333?style=flat-square&logo=english)
-![Markdown](https://img.shields.io/badge/-Markdown-333333?style=flat&logo=markdown)
+![Fusion360](https://img.shields.io/badge/-Fusion360-333333?style=flat&logo=Fusion360)
 
-### 🔨 Basic Skills
+### 🔨 初级技能
 
 ![Git](https://img.shields.io/badge/-Git-333333?style=flat-square&logo=git)
 ![GitHub](https://img.shields.io/badge/-GitHub-333333?style=flat-square&logo=github)
@@ -25,6 +25,7 @@
 ![JavaScript](https://img.shields.io/badge/-JavaScript-333333?style=flat&logo=javascript)
 ![C++](https://img.shields.io/badge/C++-00599C?style=flat&logo=c%2B%2B)
 ![Microcontroller](https://img.shields.io/badge/Microcontroller-00599C?style=flat&logo=Microcontroller)
+![Blender](https://img.shields.io/badge/-Blender-333333?style=flat&logo=Blender)
 
 ## Recently Stats
 
