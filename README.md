@@ -14,6 +14,8 @@
 ![Chinese](https://img.shields.io/badge/-Chinese-333333?style=flat-square&logo=chinese)
 ![English](https://img.shields.io/badge/-English-333333?style=flat-square&logo=english)
 ![Markdown](https://img.shields.io/badge/-Markdown-333333?style=flat&logo=markdown)
+![Fusion360](https://img.shields.io/badge/-Fusion360-333333?style=flat&logo=Fusion360)
+![Blender](https://img.shields.io/badge/-Blender-333333?style=flat&logo=Blender)
 
 ### 🔨 Basic Skills
 
@@ -34,4 +36,4 @@
 * <a href='https://jiangmiemie.com/blog/2024/4/30/' target='_blank'>自制智能家居流程</a> - 2024-04-30
 * <a href='https://jiangmiemie.com/blog/2024/3/31/' target='_blank'>乐高、激光切割与3D打印</a> - 2024-03-31
 
-[Automated by GitHub Actions at UTC 2024-08-26 10:42:27](build_readme.py)
+[Automated by GitHub Actions at UTC 2024-08-26 10:50:58](build_readme.py)
