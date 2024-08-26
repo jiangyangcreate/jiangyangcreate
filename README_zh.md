@@ -2,7 +2,7 @@
 
 ## 你好, 我是蒋洋
 
-- 🐼 来自深圳  ☀️   +29°C
+- 🐼 来自深圳  ☀️   +31°C
 - 📧 [jiangyangcreate@gmail.com](mailto:jiangyangcreate@gmail.com)
 - 🌐 [https://www.jiangmiemie.com](https://www.jiangmiemie.com)
 
@@ -14,7 +14,6 @@
 ![Chinese](https://img.shields.io/badge/-Chinese-333333?style=flat-square&logo=chinese)
 ![English](https://img.shields.io/badge/-English-333333?style=flat-square&logo=english)
 ![Markdown](https://img.shields.io/badge/-Markdown-333333?style=flat&logo=markdown)
-![Fusion360](https://img.shields.io/badge/-Fusion360-333333?style=flat&logo=Fusion360)
 
 ### 🔨 初级技能
 
@@ -26,7 +25,6 @@
 ![JavaScript](https://img.shields.io/badge/-JavaScript-333333?style=flat&logo=javascript)
 ![C++](https://img.shields.io/badge/C++-00599C?style=flat&logo=c%2B%2B)
 ![Microcontroller](https://img.shields.io/badge/Microcontroller-00599C?style=flat&logo=Microcontroller)
-![Blender](https://img.shields.io/badge/-Blender-333333?style=flat&logo=Blender)
 
 ## 最近状态
 
@@ -36,4 +34,4 @@
 * <a href='https://jiangmiemie.com/blog/2024/4/30/' target='_blank'>自制智能家居流程</a> - 2024-04-30
 * <a href='https://jiangmiemie.com/blog/2024/3/31/' target='_blank'>乐高、激光切割与3D打印</a> - 2024-03-31
 
-[由 GitHub Actions 于 UTC 2024-08-25 16:14:24 自动构建](build_readme.py)
+[由 GitHub Actions 于 UTC 2024-08-26 10:42:27 自动构建](build_readme.py)
