@@ -2,7 +2,7 @@
 
 ## Hi , I'm jiangyang
 
-- 🐼 from Shenzhen  ☀️   +29°C
+- 🐼 from Shenzhen  ☀️   +31°C
 - 📧 [jiangyangcreate@gmail.com](mailto:jiangyangcreate@gmail.com)
 - 🌐 [https://www.jiangmiemie.com](https://www.jiangmiemie.com)
 
@@ -13,9 +13,9 @@
 ![Math](https://img.shields.io/badge/-Math-333333?style=flat-square&logo=mathworks)
 ![Chinese](https://img.shields.io/badge/-Chinese-333333?style=flat-square&logo=chinese)
 ![English](https://img.shields.io/badge/-English-333333?style=flat-square&logo=english)
-![Fusion360](https://img.shields.io/badge/-Fusion360-333333?style=flat&logo=Fusion360)
+![Markdown](https://img.shields.io/badge/-Markdown-333333?style=flat&logo=markdown)
 
-### 🔨 初级技能
+### 🔨 Basic Skills
 
 ![Git](https://img.shields.io/badge/-Git-333333?style=flat-square&logo=git)
 ![GitHub](https://img.shields.io/badge/-GitHub-333333?style=flat-square&logo=github)
@@ -25,7 +25,6 @@
 ![JavaScript](https://img.shields.io/badge/-JavaScript-333333?style=flat&logo=javascript)
 ![C++](https://img.shields.io/badge/C++-00599C?style=flat&logo=c%2B%2B)
 ![Microcontroller](https://img.shields.io/badge/Microcontroller-00599C?style=flat&logo=Microcontroller)
-![Blender](https://img.shields.io/badge/-Blender-333333?style=flat&logo=Blender)
 
 ## Recently Stats
 
@@ -35,4 +34,4 @@
 * <a href='https://jiangmiemie.com/blog/2024/4/30/' target='_blank'>自制智能家居流程</a> - 2024-04-30
 * <a href='https://jiangmiemie.com/blog/2024/3/31/' target='_blank'>乐高、激光切割与3D打印</a> - 2024-03-31
 
-[Automated by GitHub Actions at UTC 2024-08-25 16:14:24](build_readme.py)
+[Automated by GitHub Actions at UTC 2024-08-26 10:42:27](build_readme.py)
