@@ -2,7 +2,7 @@
 
 ## Hi , I'm jiangyang
 
-- 🐼 from Shenzhen  ☀️   +29°C
+- 🐼 from Shenzhen  ⛅️  +28°C
 - 📧 [jiangyangcreate@gmail.com](mailto:jiangyangcreate@gmail.com)
 - 🌐 [https://www.jiangmiemie.com](https://www.jiangmiemie.com)
 
@@ -30,10 +30,10 @@
 
 ## Recently Stats
 
+* <a href='https://jiangmiemie.com/blog/2024/8/30/' target='_blank'>九月近况</a> - 2024-08-30
+* <a href='https://jiangmiemie.com/blog/2024/9/30/' target='_blank'>舆情情绪分析系统</a> - 2024-08-30
 * <a href='https://jiangmiemie.com/blog/2024/7/30/' target='_blank'>微信小程序蓝牙通信示例</a> - 2024-07-30
 * <a href='https://jiangmiemie.com/blog/2024/6/30/' target='_blank'>摄像头云台控制指令解析</a> - 2024-06-30
 * <a href='https://jiangmiemie.com/blog/2024/5/31/' target='_blank'>用Flask搭建屏幕共享工具</a> - 2024-05-31
-* <a href='https://jiangmiemie.com/blog/2024/4/30/' target='_blank'>自制智能家居流程</a> - 2024-04-30
-* <a href='https://jiangmiemie.com/blog/2024/3/31/' target='_blank'>乐高、激光切割与3D打印</a> - 2024-03-31
 
-[Automated by GitHub Actions at UTC 2024-10-07 16:16:54](build_readme.py)
+[Automated by GitHub Actions at UTC 2024-10-08 16:17:43](build_readme.py)
