@@ -26,8 +26,8 @@ class LLM:
 
         return decorator
 
-    @staticmethod
     @hide_think_output(show_think=False)
+    @staticmethod
     def get_result(text: str):
         DASHSCOPE_API_KEY = os.getenv("DASHSCOPE_API_KEY")
 
