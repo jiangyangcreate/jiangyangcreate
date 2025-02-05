@@ -11,45 +11,40 @@ from jinja2 import Environment, FileSystemLoader
 import re
 from openai import OpenAI
 
-class LLM:
-    @staticmethod
-    def hide_think_output(show_think=True):
-        def decorator(func):
-            def wrapper(*args, **kwargs):
-                result = func(*args, **kwargs)
-                if not show_think:
+def hide_think_output(show_think=True):
+    def decorator(func):
+        def wrapper(*args, **kwargs):
+            result = func(*args, **kwargs)
+            if not show_think:
+                result = re.sub(r"<think>.*?</think>", "", result, flags=re.DOTALL)
+            return result
+        return wrapper
 
-                    result = re.sub(r"<think>.*?</think>", "", result, flags=re.DOTALL)
-                return result
+    return decorator
 
-            return wrapper
+@hide_think_output(show_think=False)
+def get_result(text: str):
+    DASHSCOPE_API_KEY = os.getenv("DASHSCOPE_API_KEY")
 
-        return decorator
+    assert DASHSCOPE_API_KEY is not None, "DASHSCOPE_API_KEY is not set"
 
-    @hide_think_output(show_think=False)
-    @staticmethod
-    def get_result(text: str):
-        DASHSCOPE_API_KEY = os.getenv("DASHSCOPE_API_KEY")
-
-        assert DASHSCOPE_API_KEY is not None, "DASHSCOPE_API_KEY is not set"
-
-        client = OpenAI(
-            # 若没有配置环境变量，请用百炼API Key将下行替换为：api_key="sk-xxx",
-            api_key=DASHSCOPE_API_KEY,  # 如何获取API Key：https://help.aliyun.com/zh/model-studio/developer-reference/get-api-key
-            base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
-        )
-        completion = client.chat.completions.create(
-            model="deepseek-v3",
-            messages=[
-                {
-                    "role": "user",
-                    "content": "阅读下面的博文，然后尽可能接近50个词的范围内，提供一个总结。只需要回复总结后的文本：{}".format(
-                        text
-                    ),
-                }
-            ],
-        )
-        return completion.choices[0].message.content
+    client = OpenAI(
+        # 若没有配置环境变量，请用百炼API Key将下行替换为：api_key="sk-xxx",
+        api_key=DASHSCOPE_API_KEY,  # 如何获取API Key：https://help.aliyun.com/zh/model-studio/developer-reference/get-api-key
+        base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
+    )
+    completion = client.chat.completions.create(
+        model="deepseek-v3",
+        messages=[
+            {
+                "role": "user",
+                "content": "阅读下面的博文，然后尽可能接近50个词的范围内，提供一个总结。只需要回复总结后的文本：{}".format(
+                    text
+                ),
+            }
+        ],
+    )
+    return completion.choices[0].message.content
 
 class Jsonsummary:
     def __init__(self):
@@ -107,7 +102,7 @@ def blog_summary(feed_content):
         ):
             continue
         else:
-            summary = LLM.get_result(content_format)
+            summary = get_result(content_format)
             loaded_dict.update(
                 {url: {"content_hash": content_hash, "summary": summary}}
             )
