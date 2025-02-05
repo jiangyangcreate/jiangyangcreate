@@ -8,51 +8,48 @@ import feedparser
 from parsel import Selector
 from datetime import datetime
 from jinja2 import Environment, FileSystemLoader
+import re
+from openai import OpenAI
 
+class LLM:
+    @staticmethod
+    def hide_think_output(show_think=True):
+        def decorator(func):
+            def wrapper(*args, **kwargs):
+                result = func(*args, **kwargs)
+                if not show_think:
 
-class BaiduAI:
-    def __init__(self):
-        self.BAIDU_API_KEY = os.getenv("BAIDU_API_KEY")
-        self.BAIDU_SECRET_KEY = os.getenv("BAIDU_SECRET_KEY")
-        self.token = self.get_access_token()
+                    result = re.sub(r"<think>.*?</think>", "", result, flags=re.DOTALL)
+                return result
 
-    def get_access_token(self):
-        """
-        :return: access_token
-        """
-        url = "https://aip.baidubce.com/oauth/2.0/token"
-        params = {
-            "grant_type": "client_credentials",
-            "client_id": self.BAIDU_API_KEY,
-            "client_secret": self.BAIDU_SECRET_KEY,
-        }
-        return str(requests.post(url, params=params).json().get("access_token"))
+            return wrapper
 
-    def get_result(self, text: str):
-        messages = json.dumps(
-            {
-                "messages": [
-                    {
-                        "role": "user",
-                        "content": "阅读下面的博文，然后尽可能接近50个词的范围内，提供一个总结。只需要回复总结后的文本：{}".format(
-                            text
-                        ),
-                    }
-                ]
-            }
+        return decorator
+
+    @staticmethod
+    @hide_think_output(show_think=False)
+    def get_result(text: str):
+        DASHSCOPE_API_KEY = os.getenv("DASHSCOPE_API_KEY")
+
+        assert DASHSCOPE_API_KEY is not None, "DASHSCOPE_API_KEY is not set"
+
+        client = OpenAI(
+            # 若没有配置环境变量，请用百炼API Key将下行替换为：api_key="sk-xxx",
+            api_key=DASHSCOPE_API_KEY,  # 如何获取API Key：https://help.aliyun.com/zh/model-studio/developer-reference/get-api-key
+            base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
         )
-        session = requests.request(
-            "POST",
-            "https://aip.baidubce.com/rpc/2.0/ai_custom/v1/wenxinworkshop/chat/completions_pro?access_token="
-            + self.token,
-            headers={"Content-Type": "application/json"},
-            data=messages,
+        completion = client.chat.completions.create(
+            model="deepseek-v3",
+            messages=[
+                {
+                    "role": "user",
+                    "content": "阅读下面的博文，然后尽可能接近50个词的范围内，提供一个总结。只需要回复总结后的文本：{}".format(
+                        text
+                    ),
+                }
+            ],
         )
-        json_data = json.loads(session.text)
-        if "result" in json_data.keys():
-            answer_text = json_data["result"]
-        return answer_text
-
+        return completion.choices[0].message.content
 
 class Jsonsummary:
     def __init__(self):
@@ -110,11 +107,11 @@ def blog_summary(feed_content):
         ):
             continue
         else:
-            ai = BaiduAI()
-            summary = ai.get_result(content_format)
+            summary = LLM.get_result(content_format)
             loaded_dict.update(
                 {url: {"content_hash": content_hash, "summary": summary}}
             )
+
     jsdata.save_json(loaded_dict)
     jsdata.clean_json()
 
