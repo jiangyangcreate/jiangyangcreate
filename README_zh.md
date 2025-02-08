@@ -2,7 +2,7 @@
 
 ## 你好, 我是蒋洋
 
-- 🐼 来自深圳  ☀️   +12°C
+- 🐼 来自深圳 ⛅️  0°C
 - 📧 [jiangyangcreate@gmail.com](mailto:jiangyangcreate@gmail.com)
 - 🌐 [https://www.jiangmiemie.com](https://www.jiangmiemie.com)
 
@@ -36,4 +36,4 @@
 * <a href='https://jiangmiemie.com/blog/2024/6/30/' target='_blank'>摄像头云台控制指令解析</a> - 2024-06-30
 * <a href='https://jiangmiemie.com/blog/2024/5/31/' target='_blank'>用Flask搭建屏幕共享工具</a> - 2024-05-31
 
-[由 GitHub Actions 于 UTC 2025-02-07 16:16:45 自动构建](build_readme.py)
+[由 GitHub Actions 于 UTC 2025-02-08 16:14:45 自动构建](build_readme.py)
