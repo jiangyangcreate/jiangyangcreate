@@ -2,7 +2,7 @@
 
 ## Hi , I'm jiangyang
 
-- 🐼 from Shenzhen  ⛅️  +25°C
+- 🐼 from Shenzhen  ⛅️  +26°C
 - 📧 [jiangyangcreate@gmail.com](mailto:jiangyangcreate@gmail.com)
 - 🌐 [https://www.jiangmiemie.com](https://www.jiangmiemie.com)
 
@@ -15,6 +15,7 @@
 ![English](https://img.shields.io/badge/-English-333333?style=flat-square&logo=english)
 ![Markdown](https://img.shields.io/badge/-Markdown-333333?style=flat&logo=markdown)
 ![Fusion360](https://img.shields.io/badge/-Fusion360-333333?style=flat&logo=Fusion360)
+![Blender](https://img.shields.io/badge/-Blender-333333?style=flat&logo=Blender)
 
 ### 🔨 Basic Skills
 
@@ -35,4 +36,4 @@
 * <a href='https://jiangmiemie.com/blog/2024/6/30/' target='_blank'>摄像头云台控制指令解析</a> - 2024-06-30
 * <a href='https://jiangmiemie.com/blog/2024/5/31/' target='_blank'>用Flask搭建屏幕共享工具</a> - 2024-05-31
 
-[Automated by GitHub Actions at UTC 2025-03-27 16:19:08](build_readme.py)
+[Automated by GitHub Actions at UTC 2025-03-28 07:03:17](build_readme.py)
