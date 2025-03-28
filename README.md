@@ -15,7 +15,6 @@
 ![English](https://img.shields.io/badge/-English-333333?style=flat-square&logo=english)
 ![Markdown](https://img.shields.io/badge/-Markdown-333333?style=flat&logo=markdown)
 ![Fusion360](https://img.shields.io/badge/-Fusion360-333333?style=flat&logo=Fusion360)
-![Blender](https://img.shields.io/badge/-Blender-333333?style=flat&logo=Blender)
 
 ### 🔨 Basic Skills
 
