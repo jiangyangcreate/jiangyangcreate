@@ -36,4 +36,4 @@
 * <a href='https://jiangmiemie.com/blog/2024/7/30/' target='_blank'>微信小程序蓝牙通信示例</a> - 2024-07-30
 * <a href='https://jiangmiemie.com/blog/2024/6/30/' target='_blank'>摄像头云台控制指令解析</a> - 2024-06-30
 
-[由 GitHub Actions 于 UTC 2025-08-21 16:19:20 自动构建](build_readme.py)
+[由 GitHub Actions 于 UTC 2025-08-22 16:18:41 自动构建](build_readme.py)
