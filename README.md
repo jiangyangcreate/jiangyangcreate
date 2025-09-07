@@ -2,7 +2,7 @@
 
 ## Hi , I'm jiangyang
 
-- 🐼 from Shenzhen  🌦   +31°C
+- 🐼 from Shenzhen  🌦   +28°C
 - 📧 [jiangyangcreate@gmail.com](mailto:jiangyangcreate@gmail.com)
 - 🌐 [https://www.jiangmiemie.com](https://www.jiangmiemie.com)
 
@@ -36,4 +36,4 @@
 * <a href='https://jiangmiemie.com/blog/2024/7/30/' target='_blank'>微信小程序蓝牙通信示例</a> - 2024-07-30
 * <a href='https://jiangmiemie.com/blog/2024/6/30/' target='_blank'>摄像头云台控制指令解析</a> - 2024-06-30
 
-[Automated by GitHub Actions at UTC 2025-09-06 16:16:14](build_readme.py)
+[Automated by GitHub Actions at UTC 2025-09-07 16:16:24](build_readme.py)
