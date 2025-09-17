@@ -2,7 +2,7 @@
 
 ## 你好, 我是蒋洋
 
-- 🐼 来自深圳  ☀️   +30°C
+- 🐼 来自深圳  🌦   +28°C
 - 📧 [jiangyangcreate@gmail.com](mailto:jiangyangcreate@gmail.com)
 - 🌐 [https://www.jiangmiemie.com](https://www.jiangmiemie.com)
 
@@ -36,4 +36,4 @@
 * <a href='https://jiangmiemie.com/blog/2024/7/30/' target='_blank'>微信小程序蓝牙通信示例</a> - 2024-07-30
 * <a href='https://jiangmiemie.com/blog/2024/6/30/' target='_blank'>摄像头云台控制指令解析</a> - 2024-06-30
 
-[由 GitHub Actions 于 UTC 2025-09-16 16:19:08 自动构建](build_readme.py)
+[由 GitHub Actions 于 UTC 2025-09-17 16:19:26 自动构建](build_readme.py)
