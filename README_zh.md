@@ -30,10 +30,10 @@
 
 ## 最近状态
 
+* <a href='https://jiangmiemie.com/blog/2025/9/30/' target='_blank'>AI编程与思维牢笼</a> - 2025-09-30
 * <a href='https://jiangmiemie.com/blog/2025/8/30/' target='_blank'>GithubPage智能DNS解析</a> - 2025-08-30
 * <a href='https://jiangmiemie.com/blog/2025/7/30/' target='_blank'>ROS2视觉运动算法仿真</a> - 2025-07-30
 * <a href='https://jiangmiemie.com/blog/2025/4/30/' target='_blank'>傻瓜式机器学习竞赛提升</a> - 2025-04-30
 * <a href='https://jiangmiemie.com/blog/2024/12/30/' target='_blank'>2024年年末总结与回顾</a> - 2024-12-30
-* <a href='https://jiangmiemie.com/blog/2024/8/30/' target='_blank'>机器学习与LLM舆情分析</a> - 2024-08-30
 
-[由 GitHub Actions 于 UTC 2025-09-30 16:19:41 自动构建](build_readme.py)
+[由 GitHub Actions 于 UTC 2025-10-01 16:19:31 自动构建](build_readme.py)
