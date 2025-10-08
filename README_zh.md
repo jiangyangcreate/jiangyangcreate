@@ -2,7 +2,7 @@
 
 ## 你好, 我是蒋洋
 
-- 🐼 来自深圳  ☀️   +30°C
+- 🐼 来自深圳  ⛅️  +29°C
 - 📧 [jiangyangcreate@gmail.com](mailto:jiangyangcreate@gmail.com)
 - 🌐 [https://www.jiangmiemie.com](https://www.jiangmiemie.com)
 
@@ -36,4 +36,4 @@
 * <a href='https://jiangmiemie.com/blog/2025/4/30/' target='_blank'>傻瓜式机器学习竞赛提升</a> - 2025-04-30
 * <a href='https://jiangmiemie.com/blog/2024/12/30/' target='_blank'>2024年年末总结与回顾</a> - 2024-12-30
 
-[由 GitHub Actions 于 UTC 2025-10-07 16:19:14 自动构建](build_readme.py)
+[由 GitHub Actions 于 UTC 2025-10-08 16:19:13 自动构建](build_readme.py)
