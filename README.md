@@ -9,12 +9,13 @@
 ### 🔨 Intermediate Skills
 
 ![Python](https://img.shields.io/badge/-Python-333333?style=flat&logo=python)
-![C](https://img.shields.io/badge/C-00599C?style=flat&logo=c%2B%2B)
+![AI](https://img.shields.io/badge/-AI-333333?style=flat-square&logo=ai)
+![Math](https://img.shields.io/badge/-Math-333333?style=flat-square&logo=mathworks)
 ![Chinese](https://img.shields.io/badge/-Chinese-333333?style=flat-square&logo=chinese)
 ![English](https://img.shields.io/badge/-English-333333?style=flat-square&logo=english)
 ![Markdown](https://img.shields.io/badge/-Markdown-333333?style=flat&logo=markdown)
 ![Fusion360](https://img.shields.io/badge/-Fusion360-333333?style=flat&logo=Fusion360)
-![Microcontroller](https://img.shields.io/badge/Microcontroller-00599C?style=flat&logo=Microcontroller)
+![Blender](https://img.shields.io/badge/-Blender-333333?style=flat&logo=Blender)
 
 ### 🔨 Basic Skills
 
@@ -24,6 +25,8 @@
 ![HTML](https://img.shields.io/badge/-HTML-333333?style=flat&logo=html5)
 ![CSS](https://img.shields.io/badge/-CSS-333333?style=flat&logo=css3)
 ![JavaScript](https://img.shields.io/badge/-JavaScript-333333?style=flat&logo=javascript)
+![C++](https://img.shields.io/badge/C++-00599C?style=flat&logo=c%2B%2B)
+![Microcontroller](https://img.shields.io/badge/Microcontroller-00599C?style=flat&logo=Microcontroller)
 
 ## Recently Stats
 
@@ -33,4 +36,4 @@
 * <a href='https://jiangmiemie.com/blog/2025/4/30/' target='_blank'>傻瓜式机器学习竞赛提升</a> - 2025-04-30
 * <a href='https://jiangmiemie.com/blog/2024/12/30/' target='_blank'>2024年年末总结与回顾</a> - 2024-12-30
 
-[Automated by GitHub Actions at UTC 2025-10-11 06:05:15](build_readme.py)
+[Automated by GitHub Actions at UTC 2025-10-11 06:07:29](build_readme.py)
