@@ -39,7 +39,7 @@ def get_result(text: str):
             {"role": "system", "content": "你是一个高水平的总结大师。"},
             {
                 "role": "user",
-                "content": "阅读下面的博文，提供一个50~80字的导读式总结。只需要回复总结后的文本：{}".format(
+                "content": "阅读下面的博文，提供一个200~250字的导读式总结。只需要回复总结后的文本：{}".format(
                     text
                 ),
             }
