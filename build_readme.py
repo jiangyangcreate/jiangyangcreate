@@ -34,7 +34,7 @@ def get_result(text: str):
         base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
     )
     completion = client.chat.completions.create(
-        model="deepseek-v3",
+        model="glm-4.7",
         messages=[
             {
                 "role": "user",
