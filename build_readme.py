@@ -38,7 +38,7 @@ def get_result(text: str):
         messages=[
             {
                 "role": "user",
-                "content": "阅读下面的博文，然后尽可能接近50个词的范围内，提供一个总结。只需要回复总结后的文本：{}".format(
+                "content": "阅读下面的博文，提供一个50~80字的导读式总结。只需要回复总结后的文本：{}".format(
                     text
                 ),
             }
