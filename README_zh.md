@@ -2,7 +2,7 @@
 
 ## 你好, 我是蒋洋
 
-- 🐼 来自深圳  ☀️   +15°C
+- 🐼 来自深圳  ⛅️  +18°C
 - 📧 [jiangyangcreate@gmail.com](mailto:jiangyangcreate@gmail.com)
 - 🌐 [https://www.jiangmiemie.com](https://www.jiangmiemie.com)
 
@@ -33,4 +33,4 @@
 * <a href='https://jiangmiemie.com/blog/2025/7/30/' target='_blank'>ROS2视觉运动算法仿真</a> - 2025-07-30
 * <a href='https://jiangmiemie.com/blog/2024/12/30/' target='_blank'>2024年年末总结与回顾</a> - 2024-12-30
 
-[由 GitHub Actions 于 UTC 2026-01-24 16:20:37 自动构建](build_readme.py)
+[由 GitHub Actions 于 UTC 2026-01-25 16:20:56 自动构建](build_readme.py)
