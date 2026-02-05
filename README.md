@@ -2,7 +2,7 @@
 
 ## Hi , I'm jiangyang
 
-- 🐼 from Shenzhen ⛅️  0°C
+- 🐼 from Shenzhen  ☀️   +19°C
 - 📧 [jiangyangcreate@gmail.com](mailto:jiangyangcreate@gmail.com)
 - 🌐 [https://www.jiangmiemie.com](https://www.jiangmiemie.com)
 
@@ -34,4 +34,4 @@
 * <a href='https://jiangmiemie.com/blog/2025/7/30/' target='_blank'>ROS2视觉运动算法仿真</a> - 2025-07-30
 * <a href='https://jiangmiemie.com/blog/2024/12/30/' target='_blank'>2024年年末总结与回顾</a> - 2024-12-30
 
-[Automated by GitHub Actions at UTC 2026-02-04 16:41:44](build_readme.py)
+[Automated by GitHub Actions at UTC 2026-02-05 16:42:00](build_readme.py)
