@@ -1,183 +1,48 @@
-import os
-import json
 import time
-import hashlib
 import pathlib
 import requests
 import feedparser
-from parsel import Selector
-from datetime import datetime
 from jinja2 import Environment, FileSystemLoader
-import re
-from openai import OpenAI
 
-def hide_think_output(show_think=True):
-    def decorator(func):
-        def wrapper(*args, **kwargs):
-            result = func(*args, **kwargs)
-            if not show_think:
-                result = re.sub(r"<think>.*?</think>", "", result, flags=re.DOTALL)
-            return result
-        return wrapper
+RSS = "https://jiangmiemie.com/blog/rss.xml"
+ROOT = pathlib.Path(__file__).parent.resolve()
+JINJA_DIR = ROOT / "jinja"
+TEMPLATES = ("README", "README_zh")
 
-    return decorator
-
-@hide_think_output(show_think=False)
-def get_result(text: str):
-    DASHSCOPE_API_KEY = os.getenv("DASHSCOPE_API_KEY")
-
-    assert DASHSCOPE_API_KEY is not None, "DASHSCOPE_API_KEY is not set"
-
-    client = OpenAI(
-        # 若没有配置环境变量，请用百炼API Key将下行替换为：api_key="sk-xxx",
-        api_key=DASHSCOPE_API_KEY,  # 如何获取API Key：https://help.aliyun.com/zh/model-studio/developer-reference/get-api-key
-        base_url="https://chat.jiangyang.fun/v1",
-    )
-    completion = client.chat.completions.create(
-        model="autozhipu",
-        messages=[
-            {"role": "system", "content": "你是一个高水平的总结大师。"},
-            {
-                "role": "user",
-                "content": "阅读下面的博文，提供一个200~250字的导读式总结。只需要回复总结后的文本：{}".format(
-                    text
-                ),
-            }
-        ],
-        max_tokens=65536,
-        temperature=0.2,
-    )
-    return completion.choices[0].message.content
-
-class Jsonsummary:
-    def __init__(self):
-        root = pathlib.Path(__file__).parent.resolve()
-        self.json_file_path = os.path.join(root, "summary")
-        self.url = "https://jiangmiemie.com/"
-        self.pages = []
-
-    def load_json(self):
-        # 加载JSON文件
-        loaded_dict = {}
-        for file in os.listdir(self.json_file_path):
-            with open(
-                os.path.join(self.json_file_path, file), "r", encoding="utf-8"
-            ) as json_file:
-                loaded_dict[self.url + file.replace("_", "/").replace(".json", "")] = (
-                    json.load(json_file)
-                )
-        return loaded_dict
-
-    def save_json(self, loaded_dict):
-        # 将字典存入JSON文件
-        for key in loaded_dict:
-            key_path = key.replace(self.url, "").replace("/", "_") + ".json"
-            save_path = os.path.join(self.json_file_path, key_path)
-            with open(save_path, "w", encoding="utf-8") as json_file:
-                json.dump(loaded_dict[key], json_file, indent=4)
-
-    def clean_json(self):
-        # 根据RSS结果清理JSON文件
-        for file in os.listdir(self.json_file_path):
-            if file not in self.pages:
-                os.remove(os.path.join(self.json_file_path, file))
+jinja_env = Environment(loader=FileSystemLoader(JINJA_DIR))
 
 
-def blog_summary(feed_content):
-    jsdata = Jsonsummary()
-    loaded_dict = jsdata.load_json()
-
-    for page in feed_content:
-        url = page["link"].split("#")[0]
-        jsdata.pages.append(url.replace(jsdata.url, "").replace("/", "_") + ".json")
-        # 剪切掉摘要部分，仅保留正文
-        content = "".join(
-            page["content"][0]["value"].split(
-                "此内容根据文章生成，仅用于文章内容的解释与总结"
-            )[1:]
-        )
-        selector = Selector(text=content)
-        content_format = "".join(selector.xpath(".//text()").getall())
-        content_hash = hashlib.md5(content_format.encode()).hexdigest()
-        if (
-            loaded_dict.get(url)
-            and loaded_dict.get(url).get("content_hash") == content_hash
-        ):
-            continue
-        else:
-            summary = get_result(content_format)
-            loaded_dict.update(
-                {url: {"content_hash": content_hash, "summary": summary}}
-            )
-
-    jsdata.save_json(loaded_dict)
-    jsdata.clean_json()
+def fetch_blog(page_num: int = 5) -> str:
+    entries = feedparser.parse(RSS)["entries"][:page_num]
+    lines = []
+    for entry in entries:
+        title = entry["title"]
+        url = entry["link"].split("#")[0]
+        published = time.strftime("%Y-%m-%d", entry["published_parsed"])
+        lines.append(f"* <a href='{url}' target='_blank'>{title}</a> - {published}")
+    return "\n".join(lines)
 
 
-class Readme:
-    def __init__(self, path) -> None:
-        self.root = pathlib.Path(__file__).parent.resolve()
-        self.file_path = self.root / "{}.md".format(path)
+def fetch_weather(city: str = "shenzhen", timeout: int = 5) -> str:
+    try:
+        raw = requests.get(
+            f"https://wttr.in/{city}?m&format=3", timeout=timeout
+        ).text
+        return raw.split(":", 1)[1].replace("\n", "").strip()
+    except Exception:
+        return "⛅️  0°C"
 
-        self.jinja = Environment(
-            loader=FileSystemLoader(os.path.join(self.root, "jinja"))
-        ).get_template("{}.jinja".format(path))
 
-
-class Spider:
-    def __init__(self) -> None:
-
-        self.readme = [Readme("README"), Readme("README_zh")]
-
-    def fetch_weather(self, city="shenzhen"):
-        url = "https://wttr.in/{}?m&format=3".format(city)
-        try:
-            res = requests.get(url).text.split(":")[1].replace("\n", "")
-        except:
-            res = "⛅️  0°C"
-        return res
-
-    def fetch_blog(self):
-        content = feedparser.parse("https://jiangmiemie.com/blog/rss.xml")["entries"]
-        blog_summary(content)
-        entries = [
-            "* <a href='{url}' target='_blank'>{title}</a> - {published}".format(
-                title=entry["title"],
-                url=entry["link"].split("#")[0],
-                published=datetime.strptime(
-                    entry["published"], "%a, %d %b %Y %H:%M:%S %Z"
-                ).strftime("%Y-%m-%d"),
-            )
-            for entry in content
-        ]
-
-        return "\n".join(entries[:5])
-
-    def fetch_now(self, type):
-        now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
-        if str(type).endswith("README.md"):
-            return "[Automated by GitHub Actions at UTC {}](build_readme.py)".format(
-                now
-            )
-        elif str(type).endswith("README_zh.md"):
-            return "[由 GitHub Actions 于 UTC {} 自动构建](build_readme.py)".format(now)
-
-    def main(self):
-        weather = spider.fetch_weather()
-        blog = spider.fetch_blog()
-        for i in self.readme:
-            file_path = i.file_path
-            jinja = i.jinja
-            fetch = spider.fetch_now(file_path)
-            context = {
-                "weather": weather,
-                "fetch": fetch,
-                "blog": blog,
-            }
-            custom_section = jinja.render(context)
-            file_path.open("w", encoding="utf-8").write(custom_section)
-
+def build_readmes() -> None:
+    context = {
+        "weather": fetch_weather(),
+        "blog": fetch_blog(),
+        "fetch": time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()),
+    }
+    for name in TEMPLATES:
+        content = jinja_env.get_template(f"{name}.jinja").render(context)
+        output = ROOT / f"{name}.md"
+        output.write_text(content, encoding="utf-8")
 
 if __name__ == "__main__":
-    spider = Spider()
-    spider.main()
+    build_readmes()

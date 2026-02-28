@@ -2,7 +2,7 @@
 name: Build README
 
 on:
-  push:
+  push:  # 禁用推送时自动执行
   workflow_dispatch:
   schedule:
     - cron: '0 16 * * *'
