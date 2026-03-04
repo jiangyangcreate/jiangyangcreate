@@ -28,9 +28,9 @@
 ## 最近状态
 
 * <a href='https://jiangmiemie.com/blog/2026/2/28/' target='_blank'>AI水平依然与用户挂钩</a> - 2026-02-28
+* <a href='https://jiangmiemie.com/blog/2026/1/30/' target='_blank'>同源策略、跨域与缓存链</a> - 2026-01-30
 * <a href='https://jiangmiemie.com/blog/2025/12/30/' target='_blank'>2025年年末总结与回顾</a> - 2025-12-30
 * <a href='https://jiangmiemie.com/blog/2025/9/30/' target='_blank'>AI编程与思维牢笼</a> - 2025-09-30
 * <a href='https://jiangmiemie.com/blog/2025/8/30/' target='_blank'>GithubPage智能DNS解析</a> - 2025-08-30
-* <a href='https://jiangmiemie.com/blog/2025/7/30/' target='_blank'>ROS2视觉运动算法仿真</a> - 2025-07-30
 
-[Automated by GitHub Actions at UTC 2026-03-03 16:41:31](build_readme.py)
+[Automated by GitHub Actions at UTC 2026-03-04 16:38:30](build_readme.py)
