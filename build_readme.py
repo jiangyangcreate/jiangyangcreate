@@ -35,7 +35,7 @@ def fetch_weather(city: str = "shenzhen", timeout: int = 5) -> str:
 
 def build_readmes() -> None:
     context = {
-        "weather": fetch_weather(),
+        # "weather": fetch_weather(),
         "blog": fetch_blog(),
         "fetch": time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()),
     }
