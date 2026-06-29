@@ -28,10 +28,10 @@
 
 ## Recently Stats
 
+* <a href='https://jiangmiemie.com/blog/2026/6/30/' target='_blank'>我依然相信AI编程</a> - 2026-06-30
 * <a href='https://jiangmiemie.com/blog/2026/4/30/' target='_blank'>勇敢的为自己的判断下注</a> - 2026-04-30
 * <a href='https://jiangmiemie.com/blog/2026/2/28/' target='_blank'>AI水平依然与用户挂钩</a> - 2026-02-28
 * <a href='https://jiangmiemie.com/blog/2025/12/30/' target='_blank'>2025年年末总结与回顾</a> - 2025-12-30
 * <a href='https://jiangmiemie.com/blog/2025/9/30/' target='_blank'>AI编程与思维牢笼</a> - 2025-09-30
-* <a href='https://jiangmiemie.com/blog/2024/12/30/' target='_blank'>2024年年末总结与回顾</a> - 2024-12-30
 
-[由 GitHub Actions 于 UTC 2026-06-28 17:04:28 自动构建](build_readme.py)
+[由 GitHub Actions 于 UTC 2026-06-29 18:05:57 自动构建](build_readme.py)
